@@ -1,0 +1,27 @@
+{
+  "name": "tarea-9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronaldcdz/Tarea-Semana-9-Gestor-de-Peliculas.git"
+  },
+  "author": "Ronald Cadiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ronaldcdz/Tarea-Semana-9-Gestor-de-Peliculas/issues"
+  },
+  "homepage": "https://github.com/Ronaldcdz/Tarea-Semana-9-Gestor-de-Peliculas#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4"
+  }
+}

@@ -1,0 +1,35 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    
+}
+
+.border-radius{
+    border-radius: 10px;
+}
+
+.input-error{
+    border-color: red;
+    border-width: medium;
+}
+
+.bg-personal-data{
+    background-color: #44FFAC;
+}
+
+.bg-select{
+    background-color: #4BFCFE;
+} 
+
+.bg-confirmation {
+    background-color: #1D9C43;
+}
+
+.bg-personal-data-confirmation{
+    background-color: #1D1AE2;
+}
+
+.btn-strange-blue{
+    background-color: #FFFF;
+    border-color: #CED4DA;
+}
