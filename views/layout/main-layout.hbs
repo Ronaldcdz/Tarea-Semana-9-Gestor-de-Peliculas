@@ -20,10 +20,23 @@
             <a class="navbar-brand" href="/">Gestor de Pelis</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{#if AddMovieActive}}active{{/if}}" href="/admin/add-movies">Agregar Peliculas</a>
+                    <a class="nav-link {{#if AddMovieActive}}active{{/if}}" href="/admin/add-movies">Agregar
+                        Pel&iacute;culas</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link {{#if AdminIndexMovieActive}}active{{/if}}" href="/admin/movies">Admin
+                        Pel&iacute;culas</a>
+                </li>
             </ul>
+
+            {{#if GetMovieActive}}
+            <div class="d-flex">
+
+                <input type="search" class="form-control border-radius margin-end" placeholder="Filtrar">
+                <button class="btn btn-outline-light border-radius mx-2" type="submit">Search</button>
+            </div>
+            {{/if}}
 
         </div>
     </nav>

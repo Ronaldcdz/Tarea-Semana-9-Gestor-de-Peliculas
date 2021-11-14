@@ -18,7 +18,17 @@
                             <p class="card-text font-medium">{{movie.description}}</p>
                             <p class="card-text font-medium">G&eacute;nero: {{movie.gender}}</p>
                             <p class="card-text font-medium">Activo: {{#if movie.active}}S&iacute;{{else}}No{{/if}}</p>
-                            <a href="/movies/{{movie.id}}" class="btn btn-primary float-middle">Detalles</a>
+
+                            <div class="d-flex mx-0 float-end">
+                            <a href="/admin/edit-movies/{{movie.id}}?editMode=true" class="btn btn-primary ">Editar</a>
+                            
+                            <form action="/admin/delete-movies" method="post" class="mx-2"> 
+
+                            <input type="hidden" value="{{this.id}}" name="movieId">
+                            <button type="submit" href="/admin/movies" class="btn btn-danger float-middle">Borrar</button>
+
+                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>

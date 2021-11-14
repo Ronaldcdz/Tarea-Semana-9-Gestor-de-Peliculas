@@ -33,3 +33,25 @@ body{
     background-color: #FFFF;
     border-color: #CED4DA;
 }
+
+.margin-end{
+
+    margin-left: 70rem;
+}
+
+.font-bold{
+
+    font-weight: bold;
+}
+
+.font-medium{
+
+    font-size: large;
+}
+
+.card-disabled{
+
+    background-color: rgba(245, 245, 245, 1);
+  opacity: .4;
+}
+

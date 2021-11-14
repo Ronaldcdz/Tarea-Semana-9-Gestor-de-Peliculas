@@ -1,0 +1,11 @@
+<div class="mt-5 text-center col-md-4 offset-4">
+    <div class="card {{#if movie.active}} {{else}}card-disabled{{/if}}">
+        <img src="{{movie.imageUrl}}" class="card-img-top image-size" alt="{{movie.name}}">
+        <div class="card-body">
+            <h5 class="card-title fs-3 font-bold">{{movie.name}}</h5>
+            <p class="card-text font-medium">{{movie.description}}</p>
+            <p class="card-text font-medium">G&eacute;nero: {{movie.gender}}</p>
+            <p class="card-text font-medium">Activo: {{#if movie.active}}S&iacute;{{else}}No{{/if}}</p>
+        </div>
+    </div>
+</div>
