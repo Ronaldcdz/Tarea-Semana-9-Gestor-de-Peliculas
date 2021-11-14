@@ -30,7 +30,7 @@ exports.GetMovie = (req, res, next) =>{
 
         res.status(200).render("movies/details",
         {
-            pageTitle: "Detalles de "+movie.name,
+            pageTitle: "Detalles",
             movie: movie
         });
 
