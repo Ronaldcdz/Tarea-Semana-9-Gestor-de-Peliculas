@@ -3,30 +3,69 @@
 
         <div class="row">
 
-            <h1 class="text-center mt-4">Listado de Pel&iacute;culas</h1>
+            {{#if filterActive}}
+
+            {{#if hasMoviesFiltered}}
+
+            <h3 class="text-center mt-5 mb-5">Pel&iacute;culas filtradas por {{gender}}</h3>
+
+            {{#each moviesFiltered as |movies|}}
+
+
+            <div class="col-md-4">
+                <div class="card {{#if movies.active}} {{else}}card-disabled{{/if}}">
+                    <img src="{{movies.imageUrl}}" class="card-img-top image-size" alt="{{movies.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title fs-3 font-bold">{{movies.name}}</h5>
+                        <p class="card-text font-medium">{{movies.description}}</p>
+                        <p class="card-text font-medium">G&eacute;nero: {{movies.gender}}</p>
+                        <p class="card-text font-medium">Activo: {{#if movies.active}}S&iacute;{{else}}No{{/if}}</p>
+                        <a href="/movies/{{movies.id}}" class="btn btn-primary float-end">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+
+            {{/each}}
+
+            {{else}}
+
+            <h3 class="text-center mt-5 mb-5">No hay pel&iacute;culas filtradas por {{gender}}</h3>
+
+            {{/if}}
+
+            {{else}}
+            <h1 class="text-center mt-4 mb-4">Listado de Pel&iacute;culas</h1>
 
             {{#if hasMovies}}
 
             {{#each movies as |movie|}}
 
 
-                <div class="col-md-4">
-                    <div class="card {{#if movie.active}} {{else}}card-disabled{{/if}}">
-                        <img src="{{movie.imageUrl}}" class="card-img-top image-size" alt="{{movie.name}}">
-                        <div class="card-body">
-                            <h5 class="card-title fs-3 font-bold">{{movie.name}}</h5>
-                            <p class="card-text font-medium">{{movie.description}}</p>
-                            <p class="card-text font-medium">G&eacute;nero: {{movie.gender}}</p>
-                            <p class="card-text font-medium">Activo: {{#if movie.active}}S&iacute;{{else}}No{{/if}}</p>
-                            <a href="/movies/{{movie.id}}" class="btn btn-primary float-middle">Detalles</a>
-                        </div>
+            <div class="col-md-4">
+                <div class="card {{#if movie.active}} {{else}}card-disabled{{/if}}">
+                    <img src="{{movie.imageUrl}}" class="card-img-top image-size" alt="{{movie.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title fs-3 font-bold">{{movie.name}}</h5>
+                        <p class="card-text font-medium">{{movie.description}}</p>
+                        <p class="card-text font-medium">G&eacute;nero: {{movie.gender}}</p>
+                        <p class="card-text font-medium">Activo: {{#if movie.active}}S&iacute;{{else}}No{{/if}}</p>
+                        <a href="/movies/{{movie.id}}" class="btn btn-primary float-middle">Detalles</a>
                     </div>
                 </div>
+            </div>
 
 
 
 
             {{/each}}
+
+            {{else}}
+
+            <h3>No hay pel&iacute;culas agregadas</h3>
+
+
+            {{/if}}
 
             {{/if}}
 

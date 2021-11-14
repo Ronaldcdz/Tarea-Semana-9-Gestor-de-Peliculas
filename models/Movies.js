@@ -95,5 +95,18 @@ module.exports = class Movie {
 
     }
 
+    
+
+    static FilterByGender(gender, callback) {
+
+
+        GetAllMoviesFromFile((movies) => {
+
+            const movie = movies.filter((mov) => mov.gender === gender);
+            callback(movie);
+        });
+
+    }
+
 
 }

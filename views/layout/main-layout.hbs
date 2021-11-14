@@ -31,10 +31,21 @@
             </ul>
 
             {{#if GetMovieActive}}
-            <div class="d-flex">
+            <div>
+                
+                <form action="/movies" method="post" class="d-flex margin-end">
+                    <select class="form-select border-radius " id="gender" name="genderFilter" required>
 
-                <input type="search" class="form-control border-radius margin-end" placeholder="Filtrar">
-                <button class="btn btn-outline-light border-radius mx-2" type="submit">Search</button>
+                        <option value="" selected>Filtrar por g&eacute;nero de pel&iacute;cula</option>
+                        <option value="Accion">Acci&oacute;n</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Suspenso">Suspenso</option>
+                        <option value="Documentales">Documentales</option>
+                    </select>
+                    <button class="btn btn-outline-light border-radius mx-2" type="submit">Filtrar</button>
+
+                </form>
             </div>
             {{/if}}
 

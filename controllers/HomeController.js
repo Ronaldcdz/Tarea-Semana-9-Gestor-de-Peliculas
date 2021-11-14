@@ -37,5 +37,28 @@ exports.GetMovie = (req, res, next) =>{
     })
 }
 
+exports.PostFilterByGender = (req, res, next) => {
+
+    const gender = req.body.genderFilter.toString();
+    const filterActive = true;
+
+    MovieModel.FilterByGender(gender, (movie) => {
+
+
+        res.status(200).render("movies/home",
+        {
+            pageTitle: "Filtrado por "+gender,
+            moviesFiltered: movie,
+            filterActive: filterActive,
+            gender: gender,
+            GetMovieActive: true,
+            hasMoviesFiltered: movie.length > 0
+
+        });
+
+    })
+
+}
+
 
 
